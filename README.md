@@ -21,5 +21,5 @@ The proxy establishes the actual connection to the Cloud SQL instance and acts a
 `GCLOUD_INSTANCE=<instance-connection-name>=tcp:5432` *instance-connection-name* is found in the overview on the Cloud SQL instance  
 
 * **Add buildpack to server and run `bin/run_cloud_sql_proxy` on startup:**  
-For heroku run: `heroku buildpacks:add https://github.com/DanielZambelli/heroku-buildpack-cloud-sql-proxy -a <name-of-your-application>`  
+For heroku run: `heroku buildpacks:add https://github.com/loupehealth/heroku-buildpack-cloud-sql-proxy -a <name-of-your-application>`  
 And to run the proxy when starting a Node.js web process add this to the .procfile `web: bin/run_cloud_sql_proxy &>null && npm start`.
